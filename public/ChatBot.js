@@ -144,14 +144,14 @@ sendBtn.onclick=async()=>{
         })
         const data=await response.json()
         messageArea.removeChild(typing)
-            addMessage(data.message||"Something Went Wrong","Ai")
+            addMessage(data||"Something Went Wrong","Ai")
         
 
 
 }catch(error){
     console.log(error)
     messageArea.removeChild(typing)
-            addMessage(data.message||"Something Went Wrong","Ai")
+            addMessage(data||"Something Went Wrong","Ai")
 }
 
 
