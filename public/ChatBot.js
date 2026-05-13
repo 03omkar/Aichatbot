@@ -56,7 +56,7 @@
 <div id ="chat-message" style="
 flex:1;
 padding:12px;
-over-flow:auto;
+overflow:auto;
 background:#f9fafb;
 display:flex;
 flex-direction:column;"></div>

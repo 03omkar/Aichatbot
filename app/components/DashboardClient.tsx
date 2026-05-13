@@ -82,7 +82,7 @@ function DashboardClient({ownerId}:{ownerId:string}){
                     </div>
                     <div className='mb-10'>
                         <h1 className='text-lg font-medium mb-4'>Knowledge Base</h1>
-                        <p className='text-sm text-zinc-500 mb-4'>Add faqs,Policies,Delivery Info,Refund,etc.</p>
+                        <p className='text-sm text-zinc-500 mb-4'>Add FAQS,Policies,Delivery Info,Refund Policiy,etc.</p>
                         <div className='space-y-4'>
                             <textarea className='w-full h-54 rounded-xl border order-zinc-300 px-4 py-3 text-sm 
                             focus:outline-none focus:ring-2 focus:ring-black/80' placeholder={`Example:
