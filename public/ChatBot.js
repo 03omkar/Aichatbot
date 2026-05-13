@@ -54,12 +54,14 @@
     <span id="chat-close" style="cursor:pointer;font-size:16px">X</span>
     </div>
 <div id ="chat-message" style="
-flex:1;
+flex:1 1 0;
+min-height:0;
 padding:12px;
-overflow:auto;
+overflow-y:auto;
 background:#f9fafb;
 display:flex;
-flex-direction:column;"></div>
+flex-direction:column;
+scroll-behavior:smooth;"></div>
     <div style="
     display:flex;
     border-top:1px solid #e5e7eb;
@@ -142,14 +144,14 @@ sendBtn.onclick=async()=>{
         })
         const data=await response.json()
         messageArea.removeChild(typing)
-            addMessage(data||"Something Went Wrong","Ai")
+            addMessage(data.message||"Something Went Wrong","Ai")
         
 
 
 }catch(error){
     console.log(error)
     messageArea.removeChild(typing)
-            addMessage(data||"Something Went Wrong","Ai")
+            addMessage(data.message||"Something Went Wrong","Ai")
 }
 
 
