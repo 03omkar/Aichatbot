@@ -49,8 +49,11 @@ const ai = new GoogleGenAI({apiKey:process.env.GEMINI_API_KEY});
 const res = await ai.models.generateContent({
     model: "gemini-2.5-flash",
     contents: prompt,
-  });
-  const response= NextResponse.json(res.text)
+});
+
+const response = NextResponse.json({
+    message: String(res.text)
+})
   response.headers.set("Access-control-Allow-origin","*");
   response.headers.set("Access-control-Allow-Methods","POST,OPTIONS");
   response.headers.set("Access-control-Allow-headers","Content-type");
